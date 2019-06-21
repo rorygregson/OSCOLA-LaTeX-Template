@@ -1,0 +1,52 @@
+ \chapter{Using LaTeX}
+\section{The Basics}
+
+\subsection{An Intro to LaTeX}
+I will use this Chapter as a tutorial for LaTeX. If you are familiar with the programme, there is no need to read all this -- I am using this to show how the Shell fits together, and as a primer for those new to the programme.
+
+LaTeX is chiefly used in mathematical disciplines as it is a very precise -- and, I think, aesthetically attractive -- typesetting programme. However, its main advantage to my mind is its ability to handle large documents (such as thesis and books). Not only does it handle these without crashing (something MS Word struggles with in my experience); it also handles cross references (to sections or to cited material) very easily; and it can automatically create all your tables (including bibliographies and tables of cases) automatically. This meant that I was able to finish writing the substance of my thesis by 3pm and submit the final copy to the Exam Schools at 5pm. Most people spend a day or more on tables of cases, etc. To my mind, these advantages make the programme worth writing in. 
+
+\subsection{Quotes}
+`Quotation marks are slightly different in TeX.' Notice how the quotation marks were opened with a different symbol to the one closing the quote. This is different to MS Word and so can throw people off. ``Unsurprisingly, double quotation marks are made by doubling the single quotation marks.''
+
+If you have a quote which is longer than three lines OSCOLA says: 
+\begin{quoting}
+Present quotations longer than three lines in an indented paragraph, with no further indentation of the first line ... Do not use quotation marks, except for single quotation marks around quotations within quotations ... Leave a line space either side of the indented quotation 
+\end{quoting}
+
+Notice how the command system works. `Quoting' is a so-called `package' I have included. If you are happy with it, you need not worry any more; if you want to change the formatting of the quoting, you will have to do a bit of programming yourself. But it shouldn't take long -- and note that there are scores of TeX geeks online who will be happy to help.
+
+\subsection{Other Aspects of Formatting}
+\subsubsection{Footnotes}
+Inserting footnotes is very simple.\footnote{Notice the command to begin the footnote. You use curly brackets to complete the footnote thus.} Notice that I have the footnote `hanging', that is, indented from the number. I prefer it this way; but you can change it to any format you want if you prefer. All the different options can be found online. 
+
+\subsubsection{Cross-References}
+\label{cross-references}
+This sub-subsection introduces cross-references. First notice that I have inputted a `label' after the `subsubsection' heading. You can put a label after any section, subsection, subsubsection, footnote, etc. When you want to refer to that section (etc.) in future you input the command: \ref{cross-references}.
+
+These cross-references function across different Chapters. So, if you want to refer to this subsubsection in Chapters 2, 3, etc., you input the reference I have just noted: LaTeX will automatically refer back to it. 
+
+I should also demonstrate how this works for footnotes.\footnote{This is our test footnote; i.e. the one to which we want to refer. \label{test footnote}} When we want to refer back to it in subsequent footnotes, the same commands are used.\footnote{So here, my command should automatically refer back to footnote \ref{test footnote}. Note that you might have to compile the thesis twice to get all the references updated.}
+
+\subsubsection{Formatting Text}
+If you want text to be \textbf{bold}, \emph{italicised} or \underline{underlined}, use these simple commands. 
+
+\section{Inputting Citations}
+\subsection{Cases and Legislation}
+There would be no point using LaTeX if it wasn't able to cope with simple citations. Happily, it's very easy.\footnote{\cite{achilleas}.} The only important thing is that after you initially compile the thesis (in thesis.tex) you will need to run BibTex (in thesis.bib). To do this, open thesis.bib in your TeX editor and change the manner of compilation to BibTex. In TeXShop this is done in the top left, just to the right of the `Typeset' button. 
+
+It's worth putting in a number of foreign cases here, as this will show you -- when you generate a table of cases for this document -- how the table of cases represents these cases.\footnote{Canada: \cite{deglman}; Australia: \cite{roxborough}; and the USA: \cite{boomer}.}
+
+When you want to pinpoint to a reference, you do it like this.\footnote{\cite[10]{achilleas}; \cite[10]{benedettisc}.} (Notice that when you add another token of a single reference, TeX automatically cross refers back to the first instance in the Chapter.)
+
+Pinpointing is slightly more complex for earlier references, but still very easy.\footnote{\cite[1012|680--81]{moses} (Lord Mansfield).} I found it much easier to pinpoint to the two reports in LaTeX than in Word with (e.g.) Endnote. 
+% Notice that there are two dashes between the pinpoint numbers for the moses citation. 
+% Notice, further, how you can put in notes to yourself by commenting out text. 
+
+Legislation is similarly easy.\footnote{\cite{sga}.} If you pinpoint to a particular section of the legislation, the table of contents will register this pinpoint.\footnote{So, for instance, suppose we cited \cite[12]{sga}. Check out the legislation table when it's generated.} It might be easier to see how this works if there is more than one piece of legislation in the table. So, let's also cite another.\footnote{\cite{frustrated}.}
+
+\subsection{Books etc.}
+The basic principle here is no different to that with respect to cases.\footnote{\cite{stevens08}; \cite{stevens}; \cite{defeaters}; \cite{reynolds63}.}
+
+\section{Conclusion}
+That should give you a basic intro to how to get a Chapter going in LaTeX. The Bibliography has generated automatically (it is at the end of the thesis.pdf file). Compiling the table of cases is slightly more complicated, but is described at length in Paul Stanley's helpful guide to OSCOLA. 

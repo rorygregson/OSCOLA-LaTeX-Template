@@ -1,0 +1,25 @@
+\doublespacing %Reducing line spacing for tables.  This command doesn't actually double space the text, as it produces <8mm gaps.
+
+\tableofcontents
+
+\chapter*{Table of cases}
+\addcontentsline{toc}{chapter}{Table of cases}
+\fancyhead[R]{\textbf{TABLE OF CASES}} %Set header to "Table of Cases"
+
+\printindexearly[casesgb]% ENGLAND & WALES
+\printindexearly[casesau]% AUSTRALIA
+\printindexearly[casesca]% CANADA
+\printindexearly[casesni]% NORTHERN IRELAND
+\printindexearly[casessc]% SCOTLAND
+\printindexearly[casesus]% UNITED STATES
+\printindexearly[casesother]% OTHERS
+
+\fancyhead[R]{\bfseries\leftmark} %Set header back to default
+
+\chapter*{Table of statutes}
+\addcontentsline{toc}{chapter}{Table of statutes}
+
+\printindexearly[legisen]
+\printindexearly[legiseu]
+
+\spacing{2} %Restore double line spacing

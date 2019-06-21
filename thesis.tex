@@ -1,0 +1,34 @@
+%\includeonly{chapters/chapter1}
+%NOTE: if you want to work on just one Chapter, you can take out the `%' sign on the previous line and compile the thesis accordingly. The above command, for instance, will give you just the first Chapter. The bonus of doing it this way is that your cross references and page numbers will remain as they are in the full file.
+
+\documentclass{law}
+%\usepackage{wordlike} %For easy conversion to .docx, use this package then open the pdf using MS Word which will convert it to a .docx file
+
+\begin{document}
+
+\include{frontmatter/title}
+
+\frontmatter %Starts page numbering i, ii, iii
+\include{frontmatter/abstract}
+
+%To create table of cases and statutes, open the terminal, navigate to this directory (using cd /path/to/directory/), then execute the following:
+%ON WINDOWS: splitindex thesis -s oscola 
+%ON MAC OR LINUX: splitindex -- thesis -s oscola 
+\include{frontmatter/tables}
+
+\mainmatter %Starts page numbering 1, 2, 3
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+
+%\nocite{*} %adds all sources to bibliography, even if not cited
+
+%If you want to input ship names, put them HERE.  I have left one example, commented out.
+%\index[casesgb]{Achilleas, The@\emph{Achilleas,} The|see{Transfield Shipping Inc v Mercator Shipping Inc}}
+
+\include{endmatter/bibliography}
+
+\end{document}

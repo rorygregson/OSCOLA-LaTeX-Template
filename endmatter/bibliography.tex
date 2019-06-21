@@ -1,0 +1,30 @@
+\doublespacing %Reducing line spacing for bibliography.  This command doesn't actually double space the text, as it produces <8mm gaps
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+% This filter is used to identify works which are either of the inbook or incollection type
+\defbibfilter{inbookorincoll}{%
+  \( \type{inbook} \or \type{incollection} \)}
+
+% Define a bibheading that prints a subheading, with appropriate addition to table of contents, and sets right and left marks accordingly
+\defbibheading{mysubbibintoc}{%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}%
+  \markboth{BIBLIOGRAPHY -- \MakeUppercase{#1}}{BIBLIOGRAPHY -- \MakeUppercase{#1}}}
+
+% BOOKS
+
+\printbibliography[title={Books}, type=book, heading=mysubbibintoc]
+
+% WORKS IN COLLECTIONS
+
+\printbibliography[title={Contributions to collections}, filter=inbookorincoll, heading=mysubbibintoc]
+
+% ARTICLES IN JOURNALS
+
+\printbibliography[title={Articles}, type=article, notkeyword=nobibliographyentry, heading=mysubbibintoc]
+
+% ALL OTHER WORKS INCLUDING UNPUBLISHED MATERIAL
+
+\printbibliography[title={Other works}, nottype=book, nottype=jurisdiction, nottype=legal, nottype=legislation, nottype=article, nottype=inbook, nottype=incollection, heading=mysubbibintoc]
