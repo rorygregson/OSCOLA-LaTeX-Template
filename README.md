@@ -30,7 +30,7 @@ Once you have done all this, open thesis.tex using your LaTeX editor and compile
 
 Neither of the following files can be deleted. Deleting them will prevent the thesis from working.
 - thesis.tex: the master file which you use to compile the thesis. It should not be necessary to add much to this. 
-- law.cls: the file containing most of the packages, commands and formatting for the thesis file. It is only if you want to tinker with the aesthetics of the thesis that you will have to open and engage with this file. 
+- classes/law-thesis.cls: the file containing most of the packages, commands and formatting for the thesis file. It is only if you want to tinker with the aesthetics of the thesis that you will have to open and engage with this file. 
 
 When you compile the thesis for the first time, you will get a lot of new files (e.g. thesis.aux); and when you create a table of cases, you will get yet more. These can be deleted, but there is generally no need to do so (and they will simply reappear when you next compile the thesis). Just make sure you don’t delete the files I have just listed.
 
