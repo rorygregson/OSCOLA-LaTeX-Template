@@ -50,25 +50,20 @@
 
 %MARGINS
 %Using the wordlike package overrides this
-\setlength{\hoffset}{0.00cm}
-\setlength{\voffset}{0.00cm}
+\setlength{\hoffset}{0mm}
 \setlength{\oddsidemargin}{7mm}
-\setlength{\topmargin}{1mm}
-\setlength{\headheight}{1cm}
-\setlength{\headsep}{1cm}
-\setlength{\textheight}{21.4cm}
-\setlength{\textwidth}{14.6cm}
-\setlength{\footskip}{2.32cm}
+\setlength{\textwidth}{146mm}
 
 %HEADER AND FOOTER
 \usepackage{fancyhdr}
 \fancyhf{} %Delete default header and footer
-\pagestyle{fancy} %Insert aesthetically pleasing header
+\pagestyle{fancy} %Insert horizontal line under header
+\fancyhead[R]{\bfseries\leftmark} %Insert chapter number and title into header
 \fancyfoot[C]{\thepage} %Insert page no
 
-%Format Chapter titles
+%Format chapter titles
 \usepackage{titlesec}
-\titleformat{\chapter}[hang]{\normalfont\huge\bfseries\centering}{\thechapter}{20pt}{\Huge}
+\titleformat{\chapter}{\Huge\bfseries\centering}{\thechapter}{20pt}{}
 
 %Section numbering depth
 \setcounter{secnumdepth}{4}
@@ -89,7 +84,6 @@
 
 %FOOTNOTES
 \usepackage[bottom, hang]{footmisc}
-\setlength\footnotemargin{14pt} %indent footnotes
 \setlength{\footnotesep}{20pt} %set spacing between footnotes
 
 %Make URLs appear between greater than and less than signs, as they do in OSCOLA, rather than angled brackets
@@ -97,16 +91,18 @@
 \renewcommand{\legalendurl}{\textgreater}
 
 %TABLE OF CONTENTS
-\usepackage{tocloft}
-%Spacing
-\setlength\cftparskip{-7pt}
-\setlength\cftbeforesecskip{1pt}
-\setlength\cftaftertoctitleskip{2pt}
-%Centering
-\renewcommand{\cfttoctitlefont}{\hfill\Huge\bfseries}
+\usepackage{shorttoc} %For short table of contents
+\usepackage{tocloft} %For customising table of contents appearance
+%\setlength\cftparskip{-5pt} %Spacing between lines in contents
+%Format contents title
+\renewcommand{\cfttoctitlefont}{\Huge\bfseries\hfill}
 \renewcommand{\cftaftertoctitle}{\hfill}
-%Depth of headings included in ToC
-\setcounter{tocdepth}{1} 
+%Depth of headings included in contents
+\setcounter{tocdepth}{1}
+
+%CHAPTER TABLE OF CONTENTS
+\usepackage{titletoc} %For table of contents at start of each chapter
+\newcommand{\chaptoc}{\hrulefill\startcontents\printcontents{}{1}{\setcounter{tocdepth}{9}\singlespacing}\noindent\hrulefill} %Creates the \chaptoc command, which inserts a table of contents at the start of a chapter
 
 % ************************** HYPERLINK CROSS-REFERENCES ******************************
 %This should be the last package loaded
