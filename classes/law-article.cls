@@ -50,20 +50,15 @@
 
 %MARGINS
 %Using the wordlike package overrides this
-\setlength{\hoffset}{0.00cm}
-\setlength{\voffset}{0.00cm}
+\setlength{\hoffset}{0mm}
 \setlength{\oddsidemargin}{7mm}
-\setlength{\topmargin}{1mm}
-\setlength{\headheight}{1cm}
-\setlength{\headsep}{1cm}
-\setlength{\textheight}{21.4cm}
-\setlength{\textwidth}{14.6cm}
-\setlength{\footskip}{2.32cm}
+\setlength{\textwidth}{146mm}
 
 %HEADER AND FOOTER
 \usepackage{fancyhdr}
 \fancyhf{} %Delete default header and footer
-\pagestyle{fancy} %Insert aesthetically pleasing header
+\pagestyle{fancy} %Insert horizontal line under header
+\fancyhead[R]{\bfseries\rightmark} %Insert section number and title into header
 \fancyfoot[C]{\thepage} %Insert page no
 
 %Section numbering depth
@@ -85,24 +80,11 @@
 
 %FOOTNOTES
 \usepackage[bottom, hang]{footmisc}
-\setlength\footnotemargin{14pt} %indent footnotes
 \setlength{\footnotesep}{20pt} %set spacing between footnotes
 
 %Make URLs appear between greater than and less than signs, as they do in OSCOLA, rather than angled brackets
 \renewcommand{\legalstarturl}{\textless}
 \renewcommand{\legalendurl}{\textgreater}
-
-%TABLE OF CONTENTS
-\usepackage{tocloft}
-%Spacing
-\setlength\cftparskip{-7pt}
-\setlength\cftbeforesecskip{1pt}
-\setlength\cftaftertoctitleskip{2pt}
-%Centering
-\renewcommand{\cfttoctitlefont}{\hfill\Huge\bfseries}
-\renewcommand{\cftaftertoctitle}{\hfill}
-%Depth of headings included in ToC
-\setcounter{tocdepth}{1} 
 
 % ************************** HYPERLINK CROSS-REFERENCES ******************************
 %This should be the last package loaded
