@@ -102,9 +102,10 @@
 %Depth of headings included in contents
 \setcounter{tocdepth}{1}
 
-%CHAPTER TABLE OF CONTENTS
-\usepackage{titletoc} %For table of contents at start of each chapter
+%CONTENTS AT THE START OF EACH CHAPTER
+\usepackage{titletoc}
 \newcommand{\chaptoc}{\startcontents\printcontents{}{1}{\setcounter{tocdepth}{9}\singlespacing}} %Creates the \chaptoc command, which inserts a table of contents at the start of a chapter
+\startcontents %Necessary for contents at the start of each chapter to work with \includeonly
 
 % ************************** HYPERLINK CROSS-REFERENCES ******************************
 %This should be the last package loaded
