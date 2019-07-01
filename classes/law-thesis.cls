@@ -53,6 +53,10 @@
 \setlength{\hoffset}{0mm}
 \setlength{\oddsidemargin}{7mm}
 \setlength{\textwidth}{146mm}
+%When printed, there is an extra 2mm on each side
+%2mm + 1inch + 7mm oddsignmargin = 34mm left margin, compliant with Reg 10
+%146mm text
+%32mm remaining + 2mm = 34mm right margin
 
 %HEADER AND FOOTER
 \usepackage{fancyhdr}
@@ -84,16 +88,14 @@
 
 %FOOTNOTES
 \usepackage[bottom, hang]{footmisc}
-\setlength{\footnotesep}{20pt} %set spacing between footnotes
+\setlength{\footnotesep}{20pt} %Double spacing footnotes, per Reg 14
 
 %Make URLs appear between greater than and less than signs, as they do in OSCOLA, rather than angled brackets
 \renewcommand{\legalstarturl}{\textless}
 \renewcommand{\legalendurl}{\textgreater}
 
 %TABLE OF CONTENTS
-\usepackage{shorttoc} %For short table of contents
 \usepackage{tocloft} %For customising table of contents appearance
-%\setlength\cftparskip{-5pt} %Spacing between lines in contents
 %Format contents title
 \renewcommand{\cfttoctitlefont}{\Huge\bfseries\hfill}
 \renewcommand{\cftaftertoctitle}{\hfill}
@@ -102,7 +104,7 @@
 
 %CHAPTER TABLE OF CONTENTS
 \usepackage{titletoc} %For table of contents at start of each chapter
-\newcommand{\chaptoc}{\hrulefill\startcontents\printcontents{}{1}{\setcounter{tocdepth}{9}\singlespacing}\noindent\hrulefill} %Creates the \chaptoc command, which inserts a table of contents at the start of a chapter
+\newcommand{\chaptoc}{\startcontents\printcontents{}{1}{\setcounter{tocdepth}{9}\singlespacing}} %Creates the \chaptoc command, which inserts a table of contents at the start of a chapter
 
 % ************************** HYPERLINK CROSS-REFERENCES ******************************
 %This should be the last package loaded
