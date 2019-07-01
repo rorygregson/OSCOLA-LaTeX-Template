@@ -19,6 +19,7 @@
 \include{frontmatter/tables}
 
 \mainmatter %Starts page numbering 1, 2, 3
+\startcontents %Necessary for contents at the start of each chapter to work with \includeonly
 \include{chapters/chapter1}
 \include{chapters/chapter2}
 \include{chapters/chapter3}
@@ -30,7 +31,7 @@
 %\index[casesgb]{Achilleas, The@\emph{Achilleas,} The|see{Transfield Shipping Inc v Mercator Shipping Inc}}
 
 \backmatter %Stop chapter numbering
-\startcontents %Stop recording headings in table of contents at the start of the previous chapter
+\startcontents %Stop recording headings in contents at the start of the previous chapter
 \include{backmatter/bibliography}
 
 \end{document}
