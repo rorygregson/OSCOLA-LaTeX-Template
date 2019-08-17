@@ -9,6 +9,7 @@
 % ************************** REFERENCING ******************************
 
 \usepackage[style=oscola, indexing=cite, ibidtracker=false, citereset=chapter]{biblatex}
+\usepackage[style=british]{csquotes} %Single quotes around article and chapter titles
 \addbibresource{references/articles.bib}
 \addbibresource{references/books.bib}
 \addbibresource{references/cases.bib}
