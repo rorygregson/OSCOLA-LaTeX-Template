@@ -46,7 +46,9 @@ Commenting out text is useful when you are writing the thesis. It means that you
 
 LaTeX produces your thesis as a pdf file.  It is not possible to directly produce a docx file, but you can convert the pdf to docx: see line 5 of thesis.tex for instructions.
 
-If you have any questions, do email me: rory (dot) gregson (at) law (dot) ox (dot) ac (dot) uk
+## Questions and feedback
+
+I'm always delighted to answer questions about, and receive feedback on, this template.  Please do email me: rory (dot) gregson (at) law (dot) ox (dot) ac (dot) uk
 
 ## Acknowledgements
 
