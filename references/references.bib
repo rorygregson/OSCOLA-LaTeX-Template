@@ -1,0 +1,187 @@
+%You can import citations from Endnote, though I found this only worked so well. Changing my previous citations to be Tex compliant was the most painstaking part of the process. So, if you can start building the citation document early on that will be helpful for you. 
+
+@legislation{sga,
+Date = {1979},
+Entrysubtype = {primary},
+Keywords = {en},
+Pagination = {section},
+title = {Sale of Goods Act},
+}
+
+@legislation{frustrated,
+Date = {1943},
+Entrysubtype = {primary},
+Keywords = {en},
+Pagination = {section},
+title = {Law Reform (Frustrated Contracts) Act},
+}
+
+@jurisdiction{moses,
+title = {Moses v Macferlan},
+date = {1760},
+volume = {2},
+reporter = {Burr},
+pages = {1005},
+court = {KB},
+keywords = {gb},
+parvolume = {97},
+parreporter= {ER},
+parpages = {676},
+}
+%Notice here the distinctive manner of citation -- and, see further the way the pinpoint references are inputted into the text. (This is another virtue of Latex: it's hard to do this with these cases on MS Word.)
+
+@jurisdiction{achilleas,
+title = {Transfield Shipping Inc v Mercator Shipping Inc (The Achilleas)},
+shorttitle = {The Achilleas},
+keywords = {gb},
+date = {2008},
+number = {[2008] UKHL 48},
+court = {HL},
+reporter = {A.C.},
+volume = {1},
+pages = {61},
+options = {year-essential=true},}
+% I have used this case in part as it contains a ship name. If you want a very good table of cases, ship names should be listed separately. Paul Stanley's Readme for OSCOLA describes this in more detail. 
+%The year-essential=true is to prevent Latex from making what should be square brackets (e.g. [1940]) into curved brackets (e.g. (1940).) This is necessary whenever there is a `volume' input. Compare: 
+
+@jurisdiction{hain,
+title = {Hain Steamship Co v Tate~\& Lyle Ltd},
+keywords = {gb},
+date = {1936},
+court = {HL},
+reporter = {Com. Cas.},
+volume = {41},
+pages = {350},
+}
+%Here, the report requires curly brackets and so does not need the `essential=true' input. This all might seem quite cumbersome, but it really isn't: I simply inputted almost all my cases with the essential=true addition and then took it out where required. 
+
+@jurisdiction{benedettisc,
+title = {Benedetti v Sawiris},
+keywords = {gb},
+shorttitle = {Benedetti \textup{(SC)}},
+date = {2013},
+number = {[2013] UKSC 50},
+court = {SC},
+reporter = {W.L.R.},
+volume = {3},
+pages = {351},
+pagination = {[]},
+Options = {year-essential=true},
+}
+%Note the `number' is the way of inputting neutral citations. 
+%Note, further, that the pagination is set to paragraphs, so your pinpoints will take you to the paragraph number you input rather than the page. 
+
+%To show how the different countries' cases are inputted, and to show how they show up on the table of cases, I will give a Canadian, Australian and USA case next. These can, if preferred, be consolidated into one table of cases; at the moment, they are separated out. 
+
+@jurisdiction{deglman,
+title = {Deglman v Guaranty Trust Co of Canada and Constantineau},
+shorttitle = {Deglman},
+keywords = {ca},
+date = {1954},
+court = {SCC},
+reporter = {D.L.R.},
+volume = {3},
+pages = {758}
+}
+
+@jurisdiction{roxborough,
+title = {Roxborough v Rothmans of Pall Mall Australia Ltd},
+shorttitle = {Roxborough},
+keywords = {au},
+date = {2001},
+reporter = {C.L.R.},
+volume = {208},
+pages = {516},
+pagination = {[]}
+}
+
+@jurisdiction{boomer,
+title = {Boomer v Muir},
+keywords = {us},
+date = {1933},
+court = {Cal. Dist. Ct. App.},
+reporter = {P 2d},
+volume = {24},
+pages = {570},
+}
+
+@book{evansmhr,
+author = {Sir William Evans},
+title = {Essays: On the Action for Money Had and Received, on the Law of Insurances, and on the Law of Bills of Exchange and Promissory Notes},
+shorttitle = {On the Action for Money Had and Received},
+publisher = {Liverpool, Merrit~\& Wright}, 
+year = {1802},
+pages = {7},
+}
+%Note how if you want to input an `&', you need to put a `\' before the ampersand symbol.
+
+@book{stevens,
+author = {Stevens, R},
+title = {Torts and Rights},
+publisher = {OUP},
+year = {2007},
+}
+
+@article{opeskin,
+author = {Opeskin, B},
+title = {Damages for Breach of Contract Terminated under Express Terms},
+journal = {LQR},
+volume = {106},
+pages = {293},
+year = {1990}
+}
+
+@article{reynolds63,
+author = {Reynolds, F},
+title = {Warranty, Condition and Fundamental Term},
+journal = {LQR},
+volume = {79},
+pages = {534},
+year = {1963}
+}
+
+@article{reynolds81,
+author = {Reynolds, F},
+title = {Discharge of Contract by Breach},
+journal = {LQR},
+volume = {97},
+pages = {541},
+year = {1981}
+}
+%Notice the name of the article -- here `reynolds81' -- is your way of inputting the article into the main text. So, it's important to come up with a name which you will find easy to recall. Note, too, that it's important to keep the names of similarly titled/ authored works separate -- as here with two different papers of Francis Reynolds. 
+
+@inbook{nolan08,
+author = {Nolan, DP},
+title = {\emph{Hongkong Fir Shipping Co v Kawasaki Kisen Kaisha Ltd, The Hongkong Fir} (1961)},
+booktitle = {Landmark Cases in the Law of Contract},
+editor = {Mitchell, C and Mitchell, P},
+publisher = {Hart},
+address = {Oxford},
+year = {2008}
+}
+%Note how the \emph command is used to highlight a particular part of the text.
+
+@inbook{stevens08,
+author = {Stevens, R},
+title = {Is There a Law of Unjust Enrichment?},
+booktitle = {Unjust Enrichment and Commercial Law},
+editor = {Degeling, S and Edelman, J},
+publisher = {Thomson},
+address = {Pyrmont, N.S.W.},
+year = {2008}
+}
+
+@thesis{defeaters,
+author = {Duarte d'Almeida, L},
+title = {Defences and Defeaters},
+university = {University of Oxford},
+type = {DPhil thesis},
+year = {2011},}
+	
+@thesis{balochdphil,
+author = {Baloch, T},
+title = {Unjust Enrichment in the Contractual Context},
+university = {University of Oxford},
+type = {DPhil thesis},
+year = {2008}
+}
