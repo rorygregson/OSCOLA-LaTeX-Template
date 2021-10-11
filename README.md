@@ -48,7 +48,7 @@ LaTeX produces your thesis as a pdf file.  It is not possible to directly produc
 
 ## Questions and feedback
 
-I'm always delighted to answer questions about, and receive feedback on, this template.  Please do email me: rory (dot) gregson (at) law (dot) ox (dot) ac (dot) uk
+I'm always delighted to answer questions about, and receive feedback on, this template.  Please do email me: rjag2 (at) cam (dot) ac (dot) uk
 
 ## Acknowledgements
 
