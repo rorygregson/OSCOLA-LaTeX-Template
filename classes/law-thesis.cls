@@ -10,16 +10,11 @@
 
 \usepackage[style=oscola, indexing=cite, ibidtracker=false, citereset=chapter]{biblatex}
 \usepackage[style=british]{csquotes} %Single quotes around article and chapter titles
-\addbibresource{references/articles.bib}
-\addbibresource{references/books.bib}
-\addbibresource{references/cases.bib}
-\addbibresource{references/chapters.bib}
-\addbibresource{references/legislation.bib}
-\addbibresource{references/other.bib}
+\addbibresource{references/references.bib}
 
 %Create indexes to print in table of cases and statutes
 \usepackage[splitindex,noautomatic]{imakeidx}
-\makeindex[name=casesgb, title={England and Wales}, columns=1,intoc]
+\makeindex[name=casesen, title={England and Wales}, columns=1,intoc]
 \makeindex[name=casesau, title={Australia}, columns=1,intoc]
 \makeindex[name=casesca, title={Canada}, columns=1,intoc]
 \makeindex[name=casesni, title={Northern Ireland}, columns=1,intoc]
@@ -30,7 +25,8 @@
 \makeindex[name=legiseu, title={European Union}, columns=1,intoc]
 
 %Populate the indexes above using the virtual indexes created by bl-oscola
-\DeclareIndexAssociation{gbcases}{casesgb}% ENGLAND
+\DeclareIndexAssociation{gbcases}{casesen}% ENGLAND
+\DeclareIndexAssociation{encases}{casesen}% ENGLAND
 \DeclareIndexAssociation{aucases}{casesau}% AUSTRALIA
 \DeclareIndexAssociation{cacases}{casesca}% CANADA
 \DeclareIndexAssociation{nicases}{casesni}% NORTHERN IRELAND
@@ -41,6 +37,7 @@
 \DeclareIndexAssociation{pilcases}{casesother}% PIL
 \DeclareIndexAssociation{othercases}{casesother}% ANYTHING ELSE
 \DeclareIndexAssociation{gbprimleg}{legisen}% LEGISLATION
+\DeclareIndexAssociation{enprimleg}{legisen}% LEGISLATION
 \DeclareIndexAssociation{enroc}{legisen}% RULES OF COURT
 \DeclareIndexAssociation{euregs}{legiseu}% EU REGS
 
